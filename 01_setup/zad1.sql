@@ -1,1 +1,3 @@
-Zmiana
+CREATE DATABASE firma;
+
+
