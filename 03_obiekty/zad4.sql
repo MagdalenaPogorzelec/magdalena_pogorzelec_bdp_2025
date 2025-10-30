@@ -1,0 +1,6 @@
+-- W tabeli obiekty, jako obiekt7 zapisz obiekt złożony z obiektu 3 i obiektu 4. 
+INSERT INTO obiekty (nazwa, geom) VALUES
+('obiekt7', ST_Collect(
+    (SELECT geom FROM obiekty WHERE nazwa='obiekt3'),
+    (SELECT geom FROM obiekty WHERE nazwa='obiekt4')
+));
